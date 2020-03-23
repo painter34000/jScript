@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataType</title>
+</head>
+
+<body>
+    <script>
+        var length;
+        var isTrue = false;
+        console.log(typeof isTrue);
+        
+        var friend = {
+            firstName: "gildong",
+            lastName: "Hong",
+            age: 16,
+            getFullName: function () {
+                return this.firstName + ":" + this.lastName
+            }
+        }
+
+        var friend1 = {
+            firstName: "gildong",
+            lastName: "Hong",
+            age: 16,
+            getFullName: function () {
+                return this.firstName + ":" + this.lastName
+            }
+        }
+
+        var friend2 = {
+            firstName: "gildang",
+            lastName: "Hong",
+            age: 26,
+            getFullName: function () {
+                return this.firstName + ":" + this.lastName
+            }
+        }
+        var friend3 = {
+            firstName: "gildum",
+            lastName: "Hong",
+            age: 36,
+            getFullName: function () {
+                return this.firstName + ":" + this.lastName
+            }
+        }
+
+        var friends = [friend1, friend2, friend3];
+        for (obj of friends){
+            console.log(obj);
+        }
+
+        console.log(friend.firsName + "," + friend.lastName);
+        console.log(friend["firstName"] + "," + friend["lastName"]);
+        console.log(friend.getFullName());
+
+        function getName() {
+            return "HongSungWoo";
+        }
+        function sum(a, b) {
+            return a + b;
+        }
+
+        console.log(getName());
+        console.log("결과는" + sum(10, 20))
+
+        var numAry = [1, 2, 3, 4, 5];
+        var strAry = ["Hello", "nice", "good"];
+
+        for (var i = 0; i < numAry.length; i++) {
+            console.log(numAry[i])
+        }
+        for (var i = 0; i < strAry.length; i++) {
+            console.log(strAry[i])
+        }
+
+    </script>
+</body>
+
+</html>

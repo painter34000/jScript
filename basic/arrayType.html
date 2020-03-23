@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayType.html</title>
+</head>
+
+<body>
+    <p id="show">
+    </p>
+    <button onclick="createTable()">Create Table</button>
+
+    <script>
+
+        function createTable() {
+
+
+            console.log(document.getElementById("show"));
+
+            var friend1 = { //friend는 object타입이다.
+                firstName: "gildong",
+                lastName: "Hong",
+                age: 27
+            }
+            var friend2 = { //friend는 object타입이다.
+                firstName: "junwon",
+                lastName: "Ha",
+                age: 22
+            }
+
+            var friend3 = { //friend는 object타입이다.
+                firstName: "malme",
+                lastName: "kim",
+                age: 24
+            }
+
+            var $myTag = "<table border=10>";
+            var friends = [friend1, friend2, friend3];
+            for (obj of friends) {
+                $myTag += "<tr>";
+                for (f in obj) {
+                    // console.log(obj[f])
+                    $myTag += "<td>"
+                    $myTag += obj[f] + " ";
+                    $myTag += "</td>"
+                }
+                $myTag += "</tr>";
+            }
+            $myTag += "</table>";
+            console.log($myTag);
+            document.getElementById("show").innerHTML = $myTag;
+
+        }
+    </script>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayMethod</title>
+</head>
+<body>
+
+    <p id="show"></p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("show").innerHTML=fruits.join("-");
+
+        // pop, push, shift, unshift
+        fruits.push("Kiwi");
+        fruits.unshift("Grape");
+     //   fruits.pop();
+     //   fruits.pop();
+     //   fruits.pop();        //뒤에서 부터 빠짐
+     //   fruits.shift();      //앞에서 부터 빠짐
+        document.getElementById("show").innerHTML=fruits.join("-");
+       
+
+    </script>
+</body>
+</html>
