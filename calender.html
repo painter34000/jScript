@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0041)http://127.0.0.1:5500/basic/calender.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calender.html</title>
 </head>
 
 <body>
 
-    <body>
+    
 
         <input type="text" id="year">
     <input type="text" id="month">
@@ -87,8 +86,43 @@
         }
     </script>
 
-    </body>
+    <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
-</body>
-
-</html>
+<!-- Code injected--><table border="1"><tr><td style="background: red; color: white;">일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td style="background: blue; color: white;">토</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="background: red; color: white;">1</td></tr><tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td style="background: blue; color: white;">7</td><td style="background: red; color: white;">8</td></tr><tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td style="background: blue; color: white;">14</td><td style="background: red; color: white;">15</td></tr><tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td style="background: blue; color: white;">21</td><td style="background: red; color: white;">22</td></tr><tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td style="background: blue; color: white;">28</td><td style="background: red; color: white;">29</td></tr><tr></tr></table></body></html>
