@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrySample.html</title>
+</head>
+
+<body>
+    <script>
+
+        var arys = [34, 59, 23, 10, 88];
+        arys.push(55);   //push <-배열에서 55를 추가 하겠다
+        arys.unshift(44);  //unshift <-배열의 앞에 추가
+
+        var sum = 0;
+        for (var i = 0; i < arys.length; i++) {
+            if (arys[i] % 2 == 1)  //홀수
+                sum += arys[i];  //sum=sum+arys[i];
+        }
+        console.log("sum의 값(for):" + sum);
+
+        // forEach 활용
+        arys.forEach(function (a, b, c) {
+            if (a % 2 == 1)
+                sum += a;
+            console.log("sum의 값(forEach):" + sum);
+        })
+            var objects = [
+                { name: "kim", age: 25 },
+                { name: "park", age: 27 },
+                { name: "choi", age: 30 },
+                { name: "lee", age: 32 },
+            ]
+
+            for (var i = 0; i < objects.length; i++) {
+                console.log("이름:" + objects[i].name + ", 나이:" + objects[i].age)
+            }
+
+    </script>
+
+
+
+</body>
+
+</html>

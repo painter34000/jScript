@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>morning.html</title>
+</head>
+
+<body>
+    <input type="text" id="firstName" value="GilDong">
+    <input type="text" name="lastName" id="lastName" value="Hong">
+    <input type="text" name="age" id="age" value="15">
+    <button id="btn" onclick="addTr()">Click</button>
+    <table id="tbl" border=1>
+        <tr>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>junwon</td>
+            <td>Ha</td>
+            <td>17</td>
+        </tr>
+
+    </table>
+
+    <script>
+          var tbl = document.getElementById("tbl");
+        function addTr() {
+            var fName = document.getElementById("firstName").value;
+            var lName = document.getElementById("lastName").value;
+            var age = document.getElementById("age").value;
+
+            var $tr, $td, $text;
+            $tr = document.createElement("tr");
+
+
+            $text = document.createTextNode(fName);
+            $td = document.createElement("td");
+            $td.appendChild($text);  //부모태그에 자식을 추가해줌
+            $tr.appendChild($td);
+
+            $text = document.createTextNode(lName);
+            $td = document.createElement("td");
+            $td.appendChild($text);
+            $tr.appendChild($td);
+
+            $text = document.createTextNode(age);
+            $td = document.createElement("td");
+            $td.appendChild($text);
+            $tr.appendChild($td);
+
+            tbl.appendChild($tr);
+
+        }
+    </script>
+
+</body>
+
+</html>

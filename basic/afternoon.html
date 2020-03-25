@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afternoom.html</title>
+</head>
+
+    
+<body>
+
+    <button id="btn" onclick="addBtn()">추가</button>
+    <br><br>
+
+    <table id="tb" border="1">
+        <tr>
+            <td>NAME</td>
+            <td>PHONE</td>
+            <td>AGE</td>
+        </tr>
+
+    </table>
+
+    <script>
+        var $value = [
+            { name: "hong", phone: "1212-1212", age: 22 },
+            { name: "hong", phone: "3112-7642", age: 23 },
+            { name: "hong", phone: "6822-9343", age: 27 },
+            { name: "hong", phone: "5632-1143", age: 23 }
+        ]
+
+        function addBtn() {
+                var $tb = document.getElementById("tb");
+
+            $value.forEach(function (obj) {
+                var $tr, $td, $text;
+                $tr = document.createElement("tr");
+
+                $text = document.createTextNode(obj.name)
+                $td = document.createElement("td");
+                $td.appendChild($text);
+                $tr.appendChild($td);
+
+                $text = document.createTextNode(obj.phone)
+                $td = document.createElement("td");
+                $td.appendChild($text);
+                $tr.appendChild($td);
+
+                $text = document.createTextNode(obj.age)
+                $td = document.createElement("td");
+                $td.appendChild($text);
+                $tr.appendChild($td);
+
+                $tb.appendChild($tr);
+            });
+
+
+        }
+
+        
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>
